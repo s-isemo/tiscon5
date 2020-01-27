@@ -23,15 +23,15 @@
         <legend>個人情報</legend>
         <div class="form-group">
           <label for="customerName">氏名</label>
-          <input type="text" id="customerName" name="customerName" th:field="*{customerName}" class="form-control" value="山田太郎"/>
+          <input type="text" required="required" id="customerName" name="customerName" th:field="*{customerName}" class="form-control" value="山田太郎"/>
         </div>
         <div class="form-group">
           <label for="tel">連絡先TEL</label>
-          <input type="tel" id="tel" name="tel" th:field="*{tel}" class="form-control" value="03-1234-5678"/>
+          <input type="tel" required="required" id="tel" name="tel" th:field="*{tel}" class="form-control" value="03-1234-5678"/>
         </div>
         <div class="form-group">
           <label for="email">連絡先メールアドレス</label>
-          <input type="text" id="email" name="email" th:field="*{email}" class="form-control" value="test@test.com"/>
+          <input type="text" required="required" id="email" name="email" th:field="*{email}" class="form-control" value="test@test.com"/>
         </div>
         <div class="form-group">
           <label for="oldPrefectureId">転居元住所（都道府県）</label>
@@ -41,7 +41,7 @@
         </div>
         <div class="form-group">
           <label for="oldAddress">転居元住所（市区町村以下）</label>
-          <input type="text" id="oldAddress" name="oldAddress" th:field="*{oldAddress}"
+          <input type="text" required="required" id="oldAddress" name="oldAddress" th:field="*{oldAddress}"
                  class="form-control" value="新宿区西新宿1-1-1"/>
         </div>
         <div class="form-group">
@@ -52,7 +52,7 @@
         </div>
         <div class="form-group">
           <label for="newAddress">転居先住所（市区町村以下）</label>
-          <input type="text" id="newAddress" name="newAddress" th:field="*{newAddress}" class="form-control"
+          <input type="text" required="required" id="newAddress" name="newAddress" th:field="*{newAddress}" class="form-control"
                  value="札幌市南区1"/>
         </div>
       </fieldset>
@@ -132,8 +132,8 @@
       </fieldset>
       <div class="form-group">
         <div class="text-center">
-          <button type="submit" name="backToTop" class="btn btn-primary">TOPへ戻る</button>
           <button type="submit" name="confirm" class="btn btn-primary">確認</button>
+          <button type="submit" name="backToTop" class="btn btn-primary">TOPへ戻る</button>
         </div>
       </div>
     </div>
