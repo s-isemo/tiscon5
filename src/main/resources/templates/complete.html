@@ -10,13 +10,19 @@
   <link rel="stylesheet" th:href="@{/css/main.css}" href="../static/css/main.css">
 </head>
 <body>
-
 <nav th:insert="/header.html :: header"></nav>
+<div style="position:absolute; top:80px; left:450px;">
+  <img src="img/finish.png" width="800px" height="100px" alt="step1">
+</div>
   <div class="ui main container">
     <div class="text-center">
+      <br><br><br><br>
       <h2>申し込みが完了しました。</h2>
       <p>お電話にて正確な見積もり結果をお伝えいたします。</p>
     </div>
+    <div align="center">
+    <img src="img/aisatsu_boushi_nimotsu.png" alt="挨拶">
+      </div>
   </div>
 <script src="../js/jquery-3.4.1.min.js" th:src="@{/js/jquery-3.4.1.min.js}"></script>
 <script src="../js/popper.min.js" th:src="@{/js/popper.min.js}"></script>
