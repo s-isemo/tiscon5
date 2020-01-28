@@ -15,6 +15,9 @@
 <div class="container">
   <form th:action="@{/submit}" th:object="${userOrderForm}" class="form-horizontal" method="post">
     <h1>お見積り情報入力</h1>
+    <div align="center">
+      <img src="img/step3.png" width="800px" height="100px" alt="step1">
+    </div>
     <ul th:if="${#fields.hasErrors('all')}">
       <li th:each="err : ${#fields.errors('all')}" th:text="${err}"></li>
     </ul>
@@ -23,35 +26,42 @@
         <legend>個人情報</legend>
         <div class="form-group">
           <label for="customerName">氏名</label>
+          <img src="img/hissu.png" width="40px" height="25px" alt="必須">
           <input type="text" required="required" id="customerName" name="customerName" th:field="*{customerName}" class="form-control" value="山田太郎" placeholder="山田太郎"/>
         </div>
         <div class="form-group">
           <label for="tel">連絡先TEL(半角数字)</label>
+          <img src="img/hissu.png" width="40px" height="25px" alt="必須">
           <input type="tel" required="required" id="tel" name="tel" th:field="*{tel}" class="form-control" value="03-1234-5678" maxlength="11" pattern="^[0-9]+$" placeholder='01234567890'/>
         </div>
         <div class="form-group">
           <label for="email">連絡先メールアドレス</label>
+          <img src="img/hissu.png" width="40px" height="25px" alt="必須">
           <input type="text" required="required" id="email" name="email" th:field="*{email}" class="form-control" value="test@test.com"  placeholder="test@test.com"/>
         </div>
         <div class="form-group">
           <label for="oldPrefectureId">転居元住所（都道府県）</label>
+          <img src="img/hissu.png" width="40px" height="25px" alt="必須">
           <select id="oldPrefectureId" name="oldPrefectureId" class="form-control">
             <option th:each="prefecture : ${prefectures}" th:value="${prefecture.prefectureId}" th:field="*{oldPrefectureId}">[[${prefecture.prefectureName}]]</option>
           </select>
         </div>
         <div class="form-group">
           <label for="oldAddress">転居元住所（市区町村以下）</label>
+          <img src="img/hissu.png" width="40px" height="25px" alt="必須">
           <input type="text" required="required" id="oldAddress" name="oldAddress" th:field="*{oldAddress}"
                  class="form-control" value="新宿区西新宿1-1-1"/>
         </div>
         <div class="form-group">
           <label for="newPrefectureId">転居先住所（都道府県）</label>
+          <img src="img/hissu.png" width="40px" height="25px" alt="必須">
           <select id="newPrefectureId" name="newPrefectureId" class="form-control">
             <option th:each="prefecture : ${prefectures}" th:value="${prefecture.prefectureId}" th:field="*{newPrefectureId}">[[${prefecture.prefectureName}]]</option>
           </select>
         </div>
         <div class="form-group">
           <label for="newAddress">転居先住所（市区町村以下）</label>
+          <img src="img/hissu.png" width="40px" height="25px" alt="必須">
           <input type="text" required="required" id="newAddress" name="newAddress" th:field="*{newAddress}" class="form-control"
                  value="札幌市南区1"/>
         </div>
@@ -60,6 +70,7 @@
         <legend>荷物情報</legend>
         <div class="form-group">
           <label for="box">段ボールの個数</label>
+          <img src="img/hissu.png" width="40px" height="25px" alt="必須">
           <select id="box"  th:field="*{box}" class="form-control">
           <option value="0">0</option>
           <option value="1">1</option>
@@ -76,6 +87,7 @@
         </div>
         <div class="form-group">
           <label for="bed">ベッドの個数</label>
+          <img src="img/hissu.png" width="40px" height="25px" alt="必須">
           <select id="bed" name="bed" th:field="*{bed}" class="form-control" >
             <option value="0">0</option>
             <option value="1">1</option>
@@ -92,6 +104,7 @@
         </div>
         <div class="form-group">
           <label for="bicycle">自転車の個数</label>
+          <img src="img/hissu.png" width="40px" height="25px" alt="必須">
           <select id="bicycle" name="bicycle" th:field="*{bicycle}" class="form-control" >
             <option value="0">0</option>
             <option value="1">1</option>
@@ -108,6 +121,7 @@
         </div>
         <div class="form-group">
           <label for="washingMachine">洗濯機の個数</label>
+          <img src="img/hissu.png" width="40px" height="25px" alt="必須">
           <select id="washingMachine" name="washingMachine" th:field="*{washingMachine}" class="form-control">
             <option value="0">0</option>
             <option value="1">1</option>
@@ -124,6 +138,7 @@
         </div>
         <div class="form-group">
           <label for="hasWashingMachineSettingOption">洗濯機の設置工事申し込み</label>
+          <img src="img/hissu.png" width="40px" height="25px" alt="必須">
           <select id="hasWashingMachineSettingOption" name="hasWashingMachineSettingOption" class="form-control" th:field="*{hasWashingMachineSettingOption}">
             <option th:value="false" th:text="なし">なし</option>
             <option th:value="true" th:text="あり">あり</option>
@@ -132,8 +147,9 @@
       </fieldset>
       <div class="form-group">
         <div class="text-center">
-          <button type="submit" name="confirm" class="btn btn-primary">確認</button>
           <button type="button" onclick="history.back()" class="btn btn-primary">戻る</button>
+          <button type="submit" name="confirm" class="btn btn-primary">確認</button>
+
         </div>
       </div>
     </div>

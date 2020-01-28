@@ -15,6 +15,9 @@
 <div class="container">
   <form th:action="@{/order}" th:object="${userOrderForm}" class="form-horizontal" method="post">
     <h1>お見積り情報確認</h1>
+    <div align="center">
+      <img src="img/step4.png" width="800px" height="100px" alt="step1">
+    </div>
     <ul th:if="${#fields.hasErrors('all')}">
       <li th:each="err : ${#fields.errors('all')}" th:text="${err}"></li>
     </ul>

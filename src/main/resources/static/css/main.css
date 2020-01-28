@@ -1,5 +1,5 @@
 body {
-    background: #edf9f9;
+    background: #e6f7ff;
     background-size: cover;
     background-attachment: fixed;
     padding: 0;
@@ -195,4 +195,8 @@ ul.label {
 
 td {
     width: 400px;
+}
+
+h1 {
+  background: linear-gradient(transparent 70%, #a7d6ff 70%);
 }

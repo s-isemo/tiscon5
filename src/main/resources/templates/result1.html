@@ -15,9 +15,12 @@
 <div class="container">
   <form th:action="@{/input}" th:object="${userOrderForm}" class="form-horizontal" method="post">
     <h1>概算お見積り結果</h1>
+    <div align="center">
+      <img src="img/step2.png" width="800px" height="100px" alt="step1">
+    </div>
     <div class="col-sm-12">
       <h2>概算お見積り結果は<span th:text="${price}"></span>円です。</h2>
-      <h4>個人情報</h4>
+      <h4>お見積り情報</h4>
       <table class="table table-bordered">
         <col span="1" style="background-color: #A9B7C7;">
         <col span="2" style="background-color: #FFFFFF;">
@@ -36,13 +39,7 @@
           </td>
           <input type="hidden" name="newPrefectureId" id="newPrefectureId" th:value="*{newPrefectureId}"/>
         </tr>
-        </tbody>
-      </table>
-      <h4>荷物情報</h4>
-      <table class="table table-bordered">
-        <col span="1" style="background-color: #A9B7C7;">
-        <col span="2" style="background-color: #FFFFFF;">
-        <tbody>
+
         <tr>
           <th style="width: 40%">段ボールの個数</th>
           <td><span th:text="*{box}"></span></td>
