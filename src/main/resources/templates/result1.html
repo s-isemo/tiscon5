@@ -13,7 +13,7 @@
 <body>
 <nav th:insert="/header.html :: header"></nav>
 <div class="container">
-  <form th:action="@{/order}" th:object="${userOrderForm}" class="form-horizontal" method="post">
+  <form th:action="@{/input}" th:object="${userOrderForm}" class="form-horizontal" method="post">
     <h1>概算お見積り結果</h1>
     <div class="col-sm-12">
       <h2>概算お見積り結果は<span th:text="${price}"></span>円です。</h2>
@@ -30,21 +30,11 @@
           <input type="hidden" name="oldPrefectureId" id="oldPrefectureId" th:value="*{oldPrefectureId}"/>
         </tr>
         <tr>
-          <th>転居元住所（市区町村以下）</th>
-          <td><span th:text="*{oldAddress}"></span></td>
-          <input type="hidden" name="oldAddress" id="oldAddress" th:value="*{oldAddress}"/>
-        </tr>
-        <tr>
           <th>転居先住所（都道府県）</th>
           <td>
             <span th:each="prefecture : ${prefectures}" th:text="${prefecture.prefectureName}" th:if="${prefecture.prefectureId}==*{newPrefectureId}">東京</span>
           </td>
           <input type="hidden" name="newPrefectureId" id="newPrefectureId" th:value="*{newPrefectureId}"/>
-        </tr>
-        <tr>
-          <th>転居先住所（市区町村以下）</th>
-          <td><span th:text="*{newAddress}"></span></td>
-          <input type="hidden" name="newAddress" id="newAddress" th:value="*{newAddress}"/>
         </tr>
         </tbody>
       </table>
@@ -82,8 +72,8 @@
       </table>
       <div class="form-group">
         <div class="text-center">
-          <button type="submit" name="backToConfirm" class="btn btn-primary">戻る</button>
-          <button type="submit" name="complete" class="btn btn-primary">詳細見積もり依頼</button>
+          <button type="button" onclick="history.back()" class="btn btn-primary">戻る</button>
+          <button type="submit" name="backToInput" class="btn btn-primary">個人情報入力に移る</button>
         </div>
       </div>
     </div>
