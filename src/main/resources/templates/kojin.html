@@ -27,17 +27,17 @@
         <div class="form-group">
           <label for="customerName">氏名</label>
           <img src="img/hissu.png" width="40px" height="25px" alt="必須">
-          <input type="text" required="required" id="customerName" name="customerName" th:field="*{customerName}" class="form-control" value="山田太郎" placeholder="山田太郎"/>
+          <input type="text" required="required" id="customerName" name="customerName" th:field="*{customerName}" class="form-control" value="山田太郎" placeholder="(例)山田太郎"/>
         </div>
         <div class="form-group">
           <label for="tel">連絡先TEL(半角数字)</label>
           <img src="img/hissu.png" width="40px" height="25px" alt="必須">
-          <input type="tel" required="required" id="tel" name="tel" th:field="*{tel}" class="form-control" value="03-1234-5678" maxlength="11" pattern="^[0-9]+$" placeholder='01234567890'/>
+          <input type="tel" required="required" id="tel" name="tel" th:field="*{tel}" class="form-control" value="03-1234-5678" maxlength="11" pattern="^[0-9]+$" placeholder='(例)01234567890'/>
         </div>
         <div class="form-group">
           <label for="email">連絡先メールアドレス</label>
           <img src="img/ninni.png" width="40px" height="25px" alt="任意">
-          <input type="text" id="email" name="email" th:field="*{email}" class="form-control" value="test@test.com"  placeholder="test@test.com"/>
+          <input type="text" id="email" name="email" th:field="*{email}" class="form-control" value="test@test.com"  placeholder="(例)test@test.com"/>
         </div>
         <div class="form-group">
           <label for="oldPrefectureId">転居元住所（都道府県）</label>
