@@ -20,7 +20,6 @@ public class UserOrderForm {
     private String tel;
 
     @Email
-    @NotBlank
     private String email;
 
     @NotBlank
